@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ToDo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="box" id="heading">
+    <h1><%= headTitle %></h1>
+  </div>
+
+  <div class="box">
+    <form class="item" action="/" method="post">
+      <input type="text" name="listItems" placeholder="ADD TASK .." autocomplete="off">
+      <button type="submit" name="list" value= <%= headTitle %> >+</button>
+    </form>
+    <% for(var i=0; i<newListItems.length; i++){ %>
+    <div class="item">
+      <input type="checkbox">
+      <p> <%= newListItems[i] %> </p>
+    </div>
+    <% } %>
+  </div>
+
+</body>
+
+<footer>LGM @ Task-1</footer>
+
+</html>
